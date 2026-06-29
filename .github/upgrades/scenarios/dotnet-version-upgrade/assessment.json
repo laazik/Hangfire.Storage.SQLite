@@ -1,0 +1,1893 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2026-06-29T08:41:54.9625349Z",
+  "analysisEndTime": "2026-06-29T08:41:56.4491765Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 4,
+      "issues": 2,
+      "incidents": 64,
+      "effort": 64
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 4,
+        "Optional": 0,
+        "Potential": 60,
+        "Information": 0
+      },
+      "category": {
+        "Project": 4,
+        "Api": 60
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "src\\samples\\ConsoleSample\\ConsoleSample.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "ConsoleSample",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 1,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 23,
+        "linesOfCode": 23,
+        "totalApiScanned": 35,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "88ef27ad-692d-47f1-9b34-f4b9c7922007",
+          "ruleId": "Project.0002",
+          "projectPath": "src\\samples\\ConsoleSample\\ConsoleSample.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "src\\samples\\ConsoleSample\\ConsoleSample.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\main\\Hangfire.Storage.SQLite\\Hangfire.Storage.SQLite.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 19,
+      "properties": {
+        "appName": "Hangfire.Storage.SQLite",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.0",
+          "net48"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 38,
+        "numberOfCodeFiles": 38,
+        "linesTotal": 4032,
+        "linesOfCode": 4032,
+        "totalApiScanned": 4056,
+        "minLinesOfCodeToChange": 18,
+        "maxLinesOfCodeToChange": 18
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "d04f3ee8-18f9-4e35-83ec-d227eb682306",
+          "ruleId": "Project.0002",
+          "projectPath": "src\\main\\Hangfire.Storage.SQLite\\Hangfire.Storage.SQLite.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: netstandard2.0;net48\nRecommended target framework: netstandard2.0;net48;net10.0",
+              "protected": "Current target framework: netstandard2.0;net48\nRecommended target framework: netstandard2.0;net48;net10.0"
+            },
+            "kind": "File",
+            "path": "src\\main\\Hangfire.Storage.SQLite\\Hangfire.Storage.SQLite.csproj",
+            "snippet": "Current target framework: netstandard2.0;net48\nRecommended target framework: netstandard2.0;net48;net10.0",
+            "protectedSnippet": "Current target framework: netstandard2.0;net48\nRecommended target framework: netstandard2.0;net48;net10.0",
+            "properties": {
+              "CurrentTargetFramework": "netstandard2.0;net48",
+              "RecommendedTargetFramework": "netstandard2.0;net48;net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "9a27cf40-84ba-4742-92ae-60347c7c0272",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\main\\Hangfire.Storage.SQLite\\Hangfire.Storage.SQLite.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "TimeSpan timerInterval = TimeSpan.FromMilliseconds(_storageOptions.DistributedLockLifetime.TotalMilliseconds / 5);",
+              "protected": "M:System.TimeSpan.FromMilliseconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\main\\Hangfire.Storage.SQLite\\SQLiteDistributedLock.cs",
+            "snippet": "TimeSpan timerInterval = TimeSpan.FromMilliseconds(_storageOptions.DistributedLockLifetime.TotalMilliseconds / 5);",
+            "protectedSnippet": "M:System.TimeSpan.FromMilliseconds(System.Double)",
+            "label": "M:System.TimeSpan.FromMilliseconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 171,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "dbfafc10-5329-485e-b2bd-49dd67db2069",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\main\\Hangfire.Storage.SQLite\\Hangfire.Storage.SQLite.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "CountersAggregateInterval = TimeSpan.FromMinutes(5);",
+              "protected": "M:System.TimeSpan.FromMinutes(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\main\\Hangfire.Storage.SQLite\\SQLiteStorageOptions.cs",
+            "snippet": "CountersAggregateInterval = TimeSpan.FromMinutes(5);",
+            "protectedSnippet": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "label": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 20,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "40ad9e80-4807-41f7-84c6-4aef62028e00",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\main\\Hangfire.Storage.SQLite\\Hangfire.Storage.SQLite.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "JobExpirationCheckInterval = TimeSpan.FromHours(1);",
+              "protected": "M:System.TimeSpan.FromHours(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\main\\Hangfire.Storage.SQLite\\SQLiteStorageOptions.cs",
+            "snippet": "JobExpirationCheckInterval = TimeSpan.FromHours(1);",
+            "protectedSnippet": "M:System.TimeSpan.FromHours(System.Double)",
+            "label": "M:System.TimeSpan.FromHours(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 19,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "a45a253f-abd3-4d59-8667-2d9cb40f9b16",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\main\\Hangfire.Storage.SQLite\\Hangfire.Storage.SQLite.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "DistributedLockLifetime = TimeSpan.FromSeconds(30);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\main\\Hangfire.Storage.SQLite\\SQLiteStorageOptions.cs",
+            "snippet": "DistributedLockLifetime = TimeSpan.FromSeconds(30);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 18,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "1c265c20-5bbf-4794-98ae-b1583ad9bde5",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\main\\Hangfire.Storage.SQLite\\Hangfire.Storage.SQLite.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "InvisibilityTimeout = TimeSpan.FromMinutes(30);",
+              "protected": "M:System.TimeSpan.FromMinutes(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\main\\Hangfire.Storage.SQLite\\SQLiteStorageOptions.cs",
+            "snippet": "InvisibilityTimeout = TimeSpan.FromMinutes(30);",
+            "protectedSnippet": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "label": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 17,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "ca757975-637b-4a90-a6ac-cf670e42b91e",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\main\\Hangfire.Storage.SQLite\\Hangfire.Storage.SQLite.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "QueuePollInterval = TimeSpan.FromSeconds(15);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\main\\Hangfire.Storage.SQLite\\SQLiteStorageOptions.cs",
+            "snippet": "QueuePollInterval = TimeSpan.FromSeconds(15);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 16,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "e7dbf305-3305-4d67-8526-afd00526b004",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\main\\Hangfire.Storage.SQLite\\Hangfire.Storage.SQLite.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "CountersAggregateInterval = TimeSpan.FromMinutes(5);",
+              "protected": "M:System.TimeSpan.FromMinutes(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\main\\Hangfire.Storage.SQLite\\SQLiteStorageOptions.cs",
+            "snippet": "CountersAggregateInterval = TimeSpan.FromMinutes(5);",
+            "protectedSnippet": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "label": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 20,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "05198145-d91e-4c54-bd3d-79da6851d010",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\main\\Hangfire.Storage.SQLite\\Hangfire.Storage.SQLite.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "JobExpirationCheckInterval = TimeSpan.FromHours(1);",
+              "protected": "M:System.TimeSpan.FromHours(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\main\\Hangfire.Storage.SQLite\\SQLiteStorageOptions.cs",
+            "snippet": "JobExpirationCheckInterval = TimeSpan.FromHours(1);",
+            "protectedSnippet": "M:System.TimeSpan.FromHours(System.Double)",
+            "label": "M:System.TimeSpan.FromHours(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 19,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "4825f009-c802-4dea-99f1-28c2821ffc9e",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\main\\Hangfire.Storage.SQLite\\Hangfire.Storage.SQLite.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "DistributedLockLifetime = TimeSpan.FromSeconds(30);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\main\\Hangfire.Storage.SQLite\\SQLiteStorageOptions.cs",
+            "snippet": "DistributedLockLifetime = TimeSpan.FromSeconds(30);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 18,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "25f3b1aa-54ab-4ad9-9349-e6d264bfc6f4",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\main\\Hangfire.Storage.SQLite\\Hangfire.Storage.SQLite.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "InvisibilityTimeout = TimeSpan.FromMinutes(30);",
+              "protected": "M:System.TimeSpan.FromMinutes(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\main\\Hangfire.Storage.SQLite\\SQLiteStorageOptions.cs",
+            "snippet": "InvisibilityTimeout = TimeSpan.FromMinutes(30);",
+            "protectedSnippet": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "label": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 17,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "9c08dd55-a5ac-4fd0-9528-2b234a0d3df2",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\main\\Hangfire.Storage.SQLite\\Hangfire.Storage.SQLite.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "QueuePollInterval = TimeSpan.FromSeconds(15);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\main\\Hangfire.Storage.SQLite\\SQLiteStorageOptions.cs",
+            "snippet": "QueuePollInterval = TimeSpan.FromSeconds(15);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 16,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "3602a072-3676-48eb-89a8-e54f2ad47299",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\main\\Hangfire.Storage.SQLite\\Hangfire.Storage.SQLite.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "TimeSpan.FromSeconds(10)",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\main\\Hangfire.Storage.SQLite\\SQLiteStorage.cs",
+            "snippet": "TimeSpan.FromSeconds(10)",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 61,
+            "column": 28
+          }
+        },
+        {
+          "incidentId": "6882b019-de51-4e0a-8bd7-f4f9d3c5ffdf",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\main\\Hangfire.Storage.SQLite\\Hangfire.Storage.SQLite.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "TimeSpan.FromSeconds(10)",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\main\\Hangfire.Storage.SQLite\\SQLiteStorage.cs",
+            "snippet": "TimeSpan.FromSeconds(10)",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 61,
+            "column": 28
+          }
+        },
+        {
+          "incidentId": "59f432dc-ba35-4e02-8e08-50748299d0d9",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\main\\Hangfire.Storage.SQLite\\Hangfire.Storage.SQLite.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "TimeSpan.FromHours(1)",
+              "protected": "M:System.TimeSpan.FromHours(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\main\\Hangfire.Storage.SQLite\\ExpirationManager.cs",
+            "snippet": "TimeSpan.FromHours(1)",
+            "protectedSnippet": "M:System.TimeSpan.FromHours(System.Double)",
+            "label": "M:System.TimeSpan.FromHours(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 48,
+            "column": 28
+          }
+        },
+        {
+          "incidentId": "97674fe9-a485-4c77-9257-7687fa52f72a",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\main\\Hangfire.Storage.SQLite\\Hangfire.Storage.SQLite.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "TimeSpan.FromHours(1)",
+              "protected": "M:System.TimeSpan.FromHours(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\main\\Hangfire.Storage.SQLite\\ExpirationManager.cs",
+            "snippet": "TimeSpan.FromHours(1)",
+            "protectedSnippet": "M:System.TimeSpan.FromHours(System.Double)",
+            "label": "M:System.TimeSpan.FromHours(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 48,
+            "column": 28
+          }
+        },
+        {
+          "incidentId": "b2e412c0-6712-4195-8ddd-ece14f1dcff8",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\main\\Hangfire.Storage.SQLite\\Hangfire.Storage.SQLite.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return result != DateTime.MinValue ? result - DateTime.UtcNow : TimeSpan.FromSeconds(-1);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\main\\Hangfire.Storage.SQLite\\HangfireSQLiteConnection.cs",
+            "snippet": "return result != DateTime.MinValue ? result - DateTime.UtcNow : TimeSpan.FromSeconds(-1);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 560,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "f77ae21a-dfd6-4565-8b02-559054cfb4f6",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\main\\Hangfire.Storage.SQLite\\Hangfire.Storage.SQLite.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return result != DateTime.MinValue ? result - DateTime.UtcNow : TimeSpan.FromSeconds(-1);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\main\\Hangfire.Storage.SQLite\\HangfireSQLiteConnection.cs",
+            "snippet": "return result != DateTime.MinValue ? result - DateTime.UtcNow : TimeSpan.FromSeconds(-1);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 512,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "e0d68f81-87b3-4fe3-b4a0-89673b51c22d",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\main\\Hangfire.Storage.SQLite\\Hangfire.Storage.SQLite.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return values.Any() ? values.Min() - DateTime.UtcNow : TimeSpan.FromSeconds(-1);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\main\\Hangfire.Storage.SQLite\\HangfireSQLiteConnection.cs",
+            "snippet": "return values.Any() ? values.Min() - DateTime.UtcNow : TimeSpan.FromSeconds(-1);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 457,
+            "column": 12
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 41,
+      "properties": {
+        "appName": "Hangfire.Storage.SQLite.Test",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 12,
+        "numberOfCodeFiles": 10,
+        "linesTotal": 6652,
+        "linesOfCode": 4016,
+        "totalApiScanned": 4700,
+        "minLinesOfCodeToChange": 40,
+        "maxLinesOfCodeToChange": 40
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "f112eca1-d921-4aff-82c1-461e15511c2f",
+          "ruleId": "Project.0002",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "9c705492-9d2e-4cea-9de4-2ce202529657",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return new SQLiteStorage(new SQLiteDbConnectionFactory(() =\u003E\r\n                    new SQLiteConnection(dbId,\r\n                        flags,\r\n                        storeDateTimeAsTicks: true)\r\n                    {\r\n                        BusyTimeout = TimeSpan.FromSeconds(10),\r\n                    }),\r\n                storageOptions);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\Utils\\ConnectionUtils.cs",
+            "snippet": "return new SQLiteStorage(new SQLiteDbConnectionFactory(() =\u003E\r\n                    new SQLiteConnection(dbId,\r\n                        flags,\r\n                        storeDateTimeAsTicks: true)\r\n                    {\r\n                        BusyTimeout = TimeSpan.FromSeconds(10),\r\n                    }),\r\n                storageOptions);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 33,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "8a21b92c-0849-4d3e-a01d-213199e270b5",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Commit(database, x =\u003E x.ExpireHash(hash1.Key, TimeSpan.FromDays(1)));",
+              "protected": "M:System.TimeSpan.FromDays(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteWriteOnlyTransactionFacts.cs",
+            "snippet": "Commit(database, x =\u003E x.ExpireHash(hash1.Key, TimeSpan.FromDays(1)));",
+            "protectedSnippet": "M:System.TimeSpan.FromDays(System.Double)",
+            "label": "M:System.TimeSpan.FromDays(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 761,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "cf90c752-4dbc-4456-ae11-5902a5de5256",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Commit(database, x =\u003E x.ExpireList(list1.Key, TimeSpan.FromDays(1)));",
+              "protected": "M:System.TimeSpan.FromDays(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteWriteOnlyTransactionFacts.cs",
+            "snippet": "Commit(database, x =\u003E x.ExpireList(list1.Key, TimeSpan.FromDays(1)));",
+            "protectedSnippet": "M:System.TimeSpan.FromDays(System.Double)",
+            "label": "M:System.TimeSpan.FromDays(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 740,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "4fad15b4-1d4a-46e4-a548-a3b87de2cf9c",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Commit(database, x =\u003E x.ExpireSet(set1.Key, TimeSpan.FromDays(1)));",
+              "protected": "M:System.TimeSpan.FromDays(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteWriteOnlyTransactionFacts.cs",
+            "snippet": "Commit(database, x =\u003E x.ExpireSet(set1.Key, TimeSpan.FromDays(1)));",
+            "protectedSnippet": "M:System.TimeSpan.FromDays(System.Double)",
+            "label": "M:System.TimeSpan.FromDays(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 718,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "859f43a2-e111-4434-9e76-a802db520117",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Commit(database, x =\u003E x.DecrementCounter(\u0022my-key\u0022, TimeSpan.FromDays(1)));",
+              "protected": "M:System.TimeSpan.FromDays(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteWriteOnlyTransactionFacts.cs",
+            "snippet": "Commit(database, x =\u003E x.DecrementCounter(\u0022my-key\u0022, TimeSpan.FromDays(1)));",
+            "protectedSnippet": "M:System.TimeSpan.FromDays(System.Double)",
+            "label": "M:System.TimeSpan.FromDays(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 291,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "a883a6a2-5c4c-42fb-a4a2-bd29456e747d",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Commit(database, x =\u003E x.IncrementCounter(\u0022my-key\u0022, TimeSpan.FromDays(1)));",
+              "protected": "M:System.TimeSpan.FromDays(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteWriteOnlyTransactionFacts.cs",
+            "snippet": "Commit(database, x =\u003E x.IncrementCounter(\u0022my-key\u0022, TimeSpan.FromDays(1)));",
+            "protectedSnippet": "M:System.TimeSpan.FromDays(System.Double)",
+            "label": "M:System.TimeSpan.FromDays(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 239,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "710cee69-76d5-43a7-b602-b2136f6e1f04",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Commit(database, x =\u003E x.ExpireJob(jobId, TimeSpan.FromDays(1)));",
+              "protected": "M:System.TimeSpan.FromDays(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteWriteOnlyTransactionFacts.cs",
+            "snippet": "Commit(database, x =\u003E x.ExpireJob(jobId, TimeSpan.FromDays(1)));",
+            "protectedSnippet": "M:System.TimeSpan.FromDays(System.Double)",
+            "label": "M:System.TimeSpan.FromDays(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 68,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "46bf55c2-0212-472b-8f6c-1db22308b064",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.Equal(TimeSpan.FromSeconds(1), storageOptions.QueuePollInterval);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteStorageOptionsFacts.cs",
+            "snippet": "Assert.Equal(TimeSpan.FromSeconds(1), storageOptions.QueuePollInterval);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 60,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "b2af22c3-0629-4e93-86ad-c09cd5feb9dd",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var storageOptions = new SQLiteStorageOptions\r\n            {\r\n                QueuePollInterval = TimeSpan.FromSeconds(1)\r\n            };",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteStorageOptionsFacts.cs",
+            "snippet": "var storageOptions = new SQLiteStorageOptions\r\n            {\r\n                QueuePollInterval = TimeSpan.FromSeconds(1)\r\n            };",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 56,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "b078b168-c8cc-4ae3-9053-2faa3e949b49",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.Throws\u003CArgumentException\u003E(\r\n                () =\u003E storageOptions.QueuePollInterval = TimeSpan.FromSeconds(-1));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteStorageOptionsFacts.cs",
+            "snippet": "Assert.Throws\u003CArgumentException\u003E(\r\n                () =\u003E storageOptions.QueuePollInterval = TimeSpan.FromSeconds(-1));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 49,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "0ffd3db8-4314-45b8-8edd-be5438f8536d",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.True(result \u003C TimeSpan.FromMinutes(61));",
+              "protected": "M:System.TimeSpan.FromMinutes(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteConnectionFacts.cs",
+            "snippet": "Assert.True(result \u003C TimeSpan.FromMinutes(61));",
+            "protectedSnippet": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "label": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 1355,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "8cfb91a1-b5c5-4b74-8204-9ef15f9cd26d",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.True(TimeSpan.FromMinutes(59) \u003C result);",
+              "protected": "M:System.TimeSpan.FromMinutes(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteConnectionFacts.cs",
+            "snippet": "Assert.True(TimeSpan.FromMinutes(59) \u003C result);",
+            "protectedSnippet": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "label": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 1354,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "9c601a75-3966-4d8f-a42f-a96c37b01d8e",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.True(result \u003C TimeSpan.FromMinutes(61));",
+              "protected": "M:System.TimeSpan.FromMinutes(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteConnectionFacts.cs",
+            "snippet": "Assert.True(result \u003C TimeSpan.FromMinutes(61));",
+            "protectedSnippet": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "label": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 1195,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "a15842a1-59da-4821-b090-6d6e24dcbc29",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.True(TimeSpan.FromMinutes(59) \u003C result);",
+              "protected": "M:System.TimeSpan.FromMinutes(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteConnectionFacts.cs",
+            "snippet": "Assert.True(TimeSpan.FromMinutes(59) \u003C result);",
+            "protectedSnippet": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "label": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 1194,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "63a56fdd-ba16-4293-b5c7-bdc5cb3602a2",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.True(result \u003C TimeSpan.FromMinutes(61));",
+              "protected": "M:System.TimeSpan.FromMinutes(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteConnectionFacts.cs",
+            "snippet": "Assert.True(result \u003C TimeSpan.FromMinutes(61));",
+            "protectedSnippet": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "label": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 1024,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "452d7c0c-3ae7-41b5-a769-54dc1041ca8a",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.True(TimeSpan.FromMinutes(59) \u003C result);",
+              "protected": "M:System.TimeSpan.FromMinutes(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteConnectionFacts.cs",
+            "snippet": "Assert.True(TimeSpan.FromMinutes(59) \u003C result);",
+            "protectedSnippet": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "label": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 1023,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "74a63540-efb4-400f-9d22-8be55b2e98f0",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "connection.RemoveTimedOutServers(TimeSpan.FromHours(15));",
+              "protected": "M:System.TimeSpan.FromHours(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteConnectionFacts.cs",
+            "snippet": "connection.RemoveTimedOutServers(TimeSpan.FromHours(15));",
+            "protectedSnippet": "M:System.TimeSpan.FromHours(System.Double)",
+            "label": "M:System.TimeSpan.FromHours(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 694,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "28ea3f94-5fa9-437f-9f0a-6b0f03146353",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "UseConnection((database, connection) =\u003E Assert.Throws\u003CArgumentException\u003E(\r\n                () =\u003E connection.RemoveTimedOutServers(TimeSpan.FromMinutes(-5))));",
+              "protected": "M:System.TimeSpan.FromMinutes(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteConnectionFacts.cs",
+            "snippet": "UseConnection((database, connection) =\u003E Assert.Throws\u003CArgumentException\u003E(\r\n                () =\u003E connection.RemoveTimedOutServers(TimeSpan.FromMinutes(-5))));",
+            "protectedSnippet": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "label": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 672,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "47c2236f-3e33-4984-8f64-69b03df26e6a",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var jobId = connection.CreateExpiredJob(\r\n                    Job.FromExpression(() =\u003E SampleMethod(\u0022Hello\u0022)),\r\n                    new Dictionary\u003Cstring, string\u003E { { \u0022Key1\u0022, \u0022Value1\u0022 }, { \u0022Key2\u0022, \u0022Value2\u0022 } },\r\n                    createdAt,\r\n                    TimeSpan.FromDays(1));",
+              "protected": "M:System.TimeSpan.FromDays(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteConnectionFacts.cs",
+            "snippet": "var jobId = connection.CreateExpiredJob(\r\n                    Job.FromExpression(() =\u003E SampleMethod(\u0022Hello\u0022)),\r\n                    new Dictionary\u003Cstring, string\u003E { { \u0022Key1\u0022, \u0022Value1\u0022 }, { \u0022Key2\u0022, \u0022Value2\u0022 } },\r\n                    createdAt,\r\n                    TimeSpan.FromDays(1));",
+            "protectedSnippet": "M:System.TimeSpan.FromDays(System.Double)",
+            "label": "M:System.TimeSpan.FromDays(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 134,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "17680419-08b4-4e35-94ef-882cb27d25f1",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var @lock = connection.AcquireDistributedLock(\u00221\u0022, TimeSpan.FromSeconds(1));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteConnectionFacts.cs",
+            "snippet": "var @lock = connection.AcquireDistributedLock(\u00221\u0022, TimeSpan.FromSeconds(1));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 91,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "b38962c4-723a-471f-b3e5-85c5258444c2",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "stateData = new Dictionary\u003Cstring, string\u003E\r\n                {\r\n                    [\u0022ServerId\u0022] = Guid.NewGuid().ToString(),\r\n                    [\u0022StartedAt\u0022] = JobHelper.SerializeDateTime(DateTime.UtcNow.Subtract(TimeSpan.FromMilliseconds(500)))\r\n                };",
+              "protected": "M:System.TimeSpan.FromMilliseconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteMonitoringApiFacts.cs",
+            "snippet": "stateData = new Dictionary\u003Cstring, string\u003E\r\n                {\r\n                    [\u0022ServerId\u0022] = Guid.NewGuid().ToString(),\r\n                    [\u0022StartedAt\u0022] = JobHelper.SerializeDateTime(DateTime.UtcNow.Subtract(TimeSpan.FromMilliseconds(500)))\r\n                };",
+            "protectedSnippet": "M:System.TimeSpan.FromMilliseconds(System.Double)",
+            "label": "M:System.TimeSpan.FromMilliseconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 302,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "15c7ee56-04b2-4882-908c-56b760541fd1",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var processingState = new State()\r\n                    {\r\n                        Name = ProcessingState.StateName,\r\n                        Reason = null,\r\n                        CreatedAt = DateTime.UtcNow,\r\n                        Data = JsonConvert.SerializeObject(new Dictionary\u003Cstring, string\u003E\r\n                        {\r\n                            [\u0022ServerId\u0022] = Guid.NewGuid().ToString(),\r\n                            [\u0022StartedAt\u0022] =\r\n                            JobHelper.SerializeDateTime(DateTime.UtcNow.Subtract(TimeSpan.FromMilliseconds(500)))\r\n                        })\r\n                    };",
+              "protected": "M:System.TimeSpan.FromMilliseconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteMonitoringApiFacts.cs",
+            "snippet": "var processingState = new State()\r\n                    {\r\n                        Name = ProcessingState.StateName,\r\n                        Reason = null,\r\n                        CreatedAt = DateTime.UtcNow,\r\n                        Data = JsonConvert.SerializeObject(new Dictionary\u003Cstring, string\u003E\r\n                        {\r\n                            [\u0022ServerId\u0022] = Guid.NewGuid().ToString(),\r\n                            [\u0022StartedAt\u0022] =\r\n                            JobHelper.SerializeDateTime(DateTime.UtcNow.Subtract(TimeSpan.FromMilliseconds(500)))\r\n                        })\r\n                    };",
+            "protectedSnippet": "M:System.TimeSpan.FromMilliseconds(System.Double)",
+            "label": "M:System.TimeSpan.FromMilliseconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 249,
+            "column": 20
+          }
+        },
+        {
+          "incidentId": "a57c2961-286a-4335-be71-6921224a871c",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var source = new CancellationTokenSource(TimeSpan.FromSeconds(10));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteJobQueueFacts.cs",
+            "snippet": "var source = new CancellationTokenSource(TimeSpan.FromSeconds(10));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 324,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "f28a0ad9-6843-498c-adbe-e7b33a9fe290",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "mre.Wait(TimeSpan.FromSeconds(10));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteDistributedLockFacts.cs",
+            "snippet": "mre.Wait(TimeSpan.FromSeconds(10));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 287,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "48b12049-81af-4697-b4aa-fcd1a85d06f1",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using var slock = SQLiteDistributedLock.Acquire(\u0022resource1\u0022, TimeSpan.FromSeconds(10), database, new SQLiteStorageOptions\r\n                {\r\n                    DistributedLockLifetime = TimeSpan.FromSeconds(14)\r\n                });",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteDistributedLockFacts.cs",
+            "snippet": "using var slock = SQLiteDistributedLock.Acquire(\u0022resource1\u0022, TimeSpan.FromSeconds(10), database, new SQLiteStorageOptions\r\n                {\r\n                    DistributedLockLifetime = TimeSpan.FromSeconds(14)\r\n                });",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 270,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "f8543ac4-1d4c-4e77-ad81-6166d7b5f52b",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using var slock = SQLiteDistributedLock.Acquire(\u0022resource1\u0022, TimeSpan.FromSeconds(10), database, new SQLiteStorageOptions\r\n                {\r\n                    DistributedLockLifetime = TimeSpan.FromSeconds(14)\r\n                });",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteDistributedLockFacts.cs",
+            "snippet": "using var slock = SQLiteDistributedLock.Acquire(\u0022resource1\u0022, TimeSpan.FromSeconds(10), database, new SQLiteStorageOptions\r\n                {\r\n                    DistributedLockLifetime = TimeSpan.FromSeconds(14)\r\n                });",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 270,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "eb478d2c-4bd3-4a2f-afb8-9b61cf712a6c",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var result = await WaitForHeartBeat(slock, TimeSpan.FromSeconds(3));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteDistributedLockFacts.cs",
+            "snippet": "var result = await WaitForHeartBeat(slock, TimeSpan.FromSeconds(3));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 258,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "e1ff4470-87fe-40dc-8f2c-e7bbd5f34728",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using var slock = SQLiteDistributedLock.Acquire(\u0022resource1\u0022, TimeSpan.FromSeconds(10), database, new SQLiteStorageOptions\r\n                {\r\n                    DistributedLockLifetime = TimeSpan.FromSeconds(3)\r\n                });",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteDistributedLockFacts.cs",
+            "snippet": "using var slock = SQLiteDistributedLock.Acquire(\u0022resource1\u0022, TimeSpan.FromSeconds(10), database, new SQLiteStorageOptions\r\n                {\r\n                    DistributedLockLifetime = TimeSpan.FromSeconds(3)\r\n                });",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 254,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "f404eabe-2387-4e89-8e79-44b3d35bc71a",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using var slock = SQLiteDistributedLock.Acquire(\u0022resource1\u0022, TimeSpan.FromSeconds(10), database, new SQLiteStorageOptions\r\n                {\r\n                    DistributedLockLifetime = TimeSpan.FromSeconds(3)\r\n                });",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteDistributedLockFacts.cs",
+            "snippet": "using var slock = SQLiteDistributedLock.Acquire(\u0022resource1\u0022, TimeSpan.FromSeconds(10), database, new SQLiteStorageOptions\r\n                {\r\n                    DistributedLockLifetime = TimeSpan.FromSeconds(3)\r\n                });",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 254,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "cfe491ee-7e06-4270-b8a9-fbad6a367b88",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using (SQLiteDistributedLock.Acquire(\u0022resource1\u0022, TimeSpan.FromSeconds(10), database, new SQLiteStorageOptions() { DistributedLockLifetime = TimeSpan.FromSeconds(3) }))\r\n                {\r\n                    DistributedLock lockEntry = database.DistributedLockRepository.FirstOrDefault(_ =\u003E _.Resource == \u0022resource1\u0022);\r\n                    Assert.NotNull(lockEntry);\r\n                }",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteDistributedLockFacts.cs",
+            "snippet": "using (SQLiteDistributedLock.Acquire(\u0022resource1\u0022, TimeSpan.FromSeconds(10), database, new SQLiteStorageOptions() { DistributedLockLifetime = TimeSpan.FromSeconds(3) }))\r\n                {\r\n                    DistributedLock lockEntry = database.DistributedLockRepository.FirstOrDefault(_ =\u003E _.Resource == \u0022resource1\u0022);\r\n                    Assert.NotNull(lockEntry);\r\n                }",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 239,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "f6c4b889-b1e8-4408-8d54-6259a2e0e69a",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using (SQLiteDistributedLock.Acquire(\u0022resource1\u0022, TimeSpan.FromSeconds(10), database, new SQLiteStorageOptions() { DistributedLockLifetime = TimeSpan.FromSeconds(3) }))\r\n                {\r\n                    DistributedLock lockEntry = database.DistributedLockRepository.FirstOrDefault(_ =\u003E _.Resource == \u0022resource1\u0022);\r\n                    Assert.NotNull(lockEntry);\r\n                }",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteDistributedLockFacts.cs",
+            "snippet": "using (SQLiteDistributedLock.Acquire(\u0022resource1\u0022, TimeSpan.FromSeconds(10), database, new SQLiteStorageOptions() { DistributedLockLifetime = TimeSpan.FromSeconds(3) }))\r\n                {\r\n                    DistributedLock lockEntry = database.DistributedLockRepository.FirstOrDefault(_ =\u003E _.Resource == \u0022resource1\u0022);\r\n                    Assert.NotNull(lockEntry);\r\n                }",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 239,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "2793dddb-70d1-4250-90e3-ede322db39e6",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "database.Database.Insert(new DistributedLock\r\n                {\r\n                    Id = Guid.NewGuid().ToString(),\r\n                    Resource = \u0022resource1\u0022,\r\n                    ExpireAt = DateTime.UtcNow.Add(TimeSpan.FromSeconds(3))\r\n                });",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteDistributedLockFacts.cs",
+            "snippet": "database.Database.Insert(new DistributedLock\r\n                {\r\n                    Id = Guid.NewGuid().ToString(),\r\n                    Resource = \u0022resource1\u0022,\r\n                    ExpireAt = DateTime.UtcNow.Add(TimeSpan.FromSeconds(3))\r\n                });",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 230,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "d7190e30-291f-426c-99ed-67f4f550589c",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Thread.Sleep(TimeSpan.FromSeconds(5));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteDistributedLockFacts.cs",
+            "snippet": "Thread.Sleep(TimeSpan.FromSeconds(5));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 214,
+            "column": 20
+          }
+        },
+        {
+          "incidentId": "9cf031f9-d028-4c01-9ee1-bd47d401dd46",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using (SQLiteDistributedLock.Acquire(\u0022resource1\u0022, TimeSpan.Zero, database, new SQLiteStorageOptions() { DistributedLockLifetime = TimeSpan.FromSeconds(3) }))\r\n                {\r\n                    DateTime initialExpireAt = DateTime.UtcNow;\r\n                    Thread.Sleep(TimeSpan.FromSeconds(5));\r\n\r\n                    DistributedLock lockEntry = database.DistributedLockRepository.FirstOrDefault(_ =\u003E _.Resource == \u0022resource1\u0022);\r\n                    Assert.NotNull(lockEntry);\r\n                    Assert.True(lockEntry.ExpireAt \u003E initialExpireAt);\r\n                }",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteDistributedLockFacts.cs",
+            "snippet": "using (SQLiteDistributedLock.Acquire(\u0022resource1\u0022, TimeSpan.Zero, database, new SQLiteStorageOptions() { DistributedLockLifetime = TimeSpan.FromSeconds(3) }))\r\n                {\r\n                    DateTime initialExpireAt = DateTime.UtcNow;\r\n                    Thread.Sleep(TimeSpan.FromSeconds(5));\r\n\r\n                    DistributedLock lockEntry = database.DistributedLockRepository.FirstOrDefault(_ =\u003E _.Resource == \u0022resource1\u0022);\r\n                    Assert.NotNull(lockEntry);\r\n                    Assert.True(lockEntry.ExpireAt \u003E initialExpireAt);\r\n                }",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 211,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "8c85d872-771f-410f-9f84-924715a6b7bd",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "threads.ForEach(t =\u003E Assert.True(t.Join(TimeSpan.FromSeconds(120)), \u0022Thread is hanging unexpected\u0022));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteDistributedLockFacts.cs",
+            "snippet": "threads.ForEach(t =\u003E Assert.True(t.Join(TimeSpan.FromSeconds(120)), \u0022Thread is hanging unexpected\u0022));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 188,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "90724833-7aea-4b9b-8066-cbe009dcd7cb",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using (SQLiteDistributedLock.Acquire(\u0022resource1\u0022, TimeSpan.FromSeconds(10), connection, new SQLiteStorageOptions()))\r\n                {\r\n                    // Find out if any other threads managed to acquire the lock.\r\n                    var oldConcurrencyCounter = Interlocked.CompareExchange(ref concurrencyCounter, 1, 0);\r\n\r\n                    // The old concurrency counter should be 0 as only one thread should be allowed to acquire the lock.\r\n                    success[i] = oldConcurrencyCounter == 0;\r\n\r\n                    Interlocked.MemoryBarrier();\r\n\r\n                    // Hold the lock for some time.\r\n                    Thread.Sleep(100);\r\n\r\n                    Interlocked.Decrement(ref concurrencyCounter);\r\n                }",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteDistributedLockFacts.cs",
+            "snippet": "using (SQLiteDistributedLock.Acquire(\u0022resource1\u0022, TimeSpan.FromSeconds(10), connection, new SQLiteStorageOptions()))\r\n                {\r\n                    // Find out if any other threads managed to acquire the lock.\r\n                    var oldConcurrencyCounter = Interlocked.CompareExchange(ref concurrencyCounter, 1, 0);\r\n\r\n                    // The old concurrency counter should be 0 as only one thread should be allowed to acquire the lock.\r\n                    success[i] = oldConcurrencyCounter == 0;\r\n\r\n                    Interlocked.MemoryBarrier();\r\n\r\n                    // Hold the lock for some time.\r\n                    Thread.Sleep(100);\r\n\r\n                    Interlocked.Decrement(ref concurrencyCounter);\r\n                }",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 167,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "bea7608f-b350-4174-8b0f-a5cd52ee5764",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.InRange(startTime.Elapsed, TimeSpan.Zero, TimeSpan.FromSeconds(5));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteDistributedLockFacts.cs",
+            "snippet": "Assert.InRange(startTime.Elapsed, TimeSpan.Zero, TimeSpan.FromSeconds(5));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 143,
+            "column": 20
+          }
+        },
+        {
+          "incidentId": "3ea9db27-12dd-40f1-8209-3335be1e47c6",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using (SQLiteDistributedLock.Acquire(\u0022resource1\u0022, TimeSpan.FromMinutes(15), database, new SQLiteStorageOptions()))\r\n                {\r\n                    Assert.InRange(startTime.Elapsed, TimeSpan.Zero, TimeSpan.FromSeconds(5));\r\n                }",
+              "protected": "M:System.TimeSpan.FromMinutes(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteDistributedLockFacts.cs",
+            "snippet": "using (SQLiteDistributedLock.Acquire(\u0022resource1\u0022, TimeSpan.FromMinutes(15), database, new SQLiteStorageOptions()))\r\n                {\r\n                    Assert.InRange(startTime.Elapsed, TimeSpan.Zero, TimeSpan.FromSeconds(5));\r\n                }",
+            "protectedSnippet": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "label": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 141,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "d07ec7e9-0242-4bce-8f6f-9f130bd303a1",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "mre.Wait(TimeSpan.FromSeconds(5));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteDistributedLockFacts.cs",
+            "snippet": "mre.Wait(TimeSpan.FromSeconds(5));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 137,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "547fe306-9791-4654-8803-fb7a6891cd07",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\test\\Hangfire.Storage.SQLite.Test\\Hangfire.Storage.SQLite.Test.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Thread.Sleep(TimeSpan.FromSeconds(3));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\test\\Hangfire.Storage.SQLite.Test\\SQLiteDistributedLockFacts.cs",
+            "snippet": "Thread.Sleep(TimeSpan.FromSeconds(3));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 128,
+            "column": 24
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\samples\\WebSample\\WebSample.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 3,
+      "properties": {
+        "appName": "WebSample",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 4,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 77,
+        "linesOfCode": 60,
+        "totalApiScanned": 119,
+        "minLinesOfCodeToChange": 2,
+        "maxLinesOfCodeToChange": 2
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "a9700e64-13cf-49b7-8b2d-4bd7788b415e",
+          "ruleId": "Project.0002",
+          "projectPath": "src\\samples\\WebSample\\WebSample.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "src\\samples\\WebSample\\WebSample.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "c2a165ec-2efc-49da-abda-a2c8785e253b",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\samples\\WebSample\\WebSample.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "services.AddHangfire(configuration =\u003E configuration\r\n    .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)\r\n    .UseSimpleAssemblyNameTypeSerializer()\r\n    .UseRecommendedSerializerSettings()\r\n    .UseSQLiteStorage(\u0022Hangfire.db\u0022)\r\n    .UseHeartbeatPage(checkInterval: TimeSpan.FromSeconds(10))\r\n    .UseJobsLogger());",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\samples\\WebSample\\Program.cs",
+            "snippet": "services.AddHangfire(configuration =\u003E configuration\r\n    .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)\r\n    .UseSimpleAssemblyNameTypeSerializer()\r\n    .UseRecommendedSerializerSettings()\r\n    .UseSQLiteStorage(\u0022Hangfire.db\u0022)\r\n    .UseHeartbeatPage(checkInterval: TimeSpan.FromSeconds(10))\r\n    .UseJobsLogger());",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 13,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "2d81c47d-697f-4449-9126-0d0169cb5ada",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src\\samples\\WebSample\\WebSample.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "services.AddTransient\u003CIBackgroundProcess, ProcessMonitor\u003E(x =\u003E new ProcessMonitor(checkInterval: TimeSpan.FromSeconds(10)));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "src\\samples\\WebSample\\Program.cs",
+            "snippet": "services.AddTransient\u003CIBackgroundProcess, ProcessMonitor\u003E(x =\u003E new ProcessMonitor(checkInterval: TimeSpan.FromSeconds(10)));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 12,
+            "column": 0
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in modern .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0002": {
+      "id": "Api.0002",
+      "isFeature": false,
+      "description": "API is source incompatible for selected .NET version: requires code changes to compile successfully when targeting a new version, such as removing obsolete APIs or changing method signatures.",
+      "label": "Source incompatible for selected .NET version",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Breaking changes in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}
