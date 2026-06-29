@@ -3,11 +3,12 @@
   "operationId": "2eba884e-d581-4364-913b-3b518556d8ea",
   "description": "Upgrade .NET projects to newer .NET versions, including guidance on current release status, support lifecycle (LTS/STS), and recommended upgrade targets.",
   "startTime": "2026-06-29T08:41:29.495304Z",
-  "lastUpdateTime": "2026-06-29T08:48:42.1725687Z",
+  "lastUpdateTime": "2026-06-29T08:48:49.6123552Z",
   "properties": {
     "taskStates": {
       "01-prerequisites": "Completed",
-      "02-sqlite-library": "Completed"
+      "02-sqlite-library": "Completed",
+      "03-dependents": "InProgress"
     },
     "UpgradeTargetFramework": "net10.0"
   },
