@@ -7,8 +7,8 @@
 - Removed OS-conditional `<PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">` (netstandard2.0;net48)
 - Added single unconditional `<TargetFramework>net10.0</TargetFramework>`
 - Bumped version from 0.4.3 to 0.4.4
-- Switched `SQLitePCLRaw.bundle_e_sqlite3` → `SQLitePCLRaw.bundle_green` 2.1.11 (eliminates NETSDK1206 RID warnings)
-- Added explicit `SQLitePCLRaw.lib.e_sqlite3` 2.1.11 with `NoWarn="NU1903"` to suppress false-positive NuGet vulnerability database entry (`dotnet list package --vulnerable` confirms no active CVE)
+- Upgraded `sqlite-net-pcl` to 1.11.272-beta (pre-release)
+- Upgraded `SQLitePCLRaw.bundle_e_sqlite3` to 3.0.3
 
 ### Source File Changes
 - `SQLiteWriteOnlyTransaction.cs` line 335: Changed `throw ex;` → `throw;` to fix CA2200 (re-throw preserves stack trace)
