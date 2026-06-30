@@ -1,13 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup Condition=" '$(OS)' != 'Windows_NT' ">
-		<TargetFramework>netstandard2.0</TargetFramework>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
-		<TargetFrameworks>netstandard2.0;net48</TargetFrameworks>
-	</PropertyGroup>
 	<PropertyGroup>
-		<Version>0.4.3</Version>
+		<TargetFramework>net10.0</TargetFramework>
+		<Version>0.4.4</Version>
 		<Authors>RaisedApp</Authors>
 		<Company>RaisedApp</Company>
 		<Copyright>Copyright © 2019 - Present</Copyright>
@@ -17,15 +12,19 @@
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>Hangfire Hangfire-Storage Hangfire-Extension SQLite</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<NoWarn>NU5104</NoWarn>
 		<title>Hangfire Storage SQLite</title>
 		<Description>An Alternative SQLite Storage for Hangfire</Description>
 		<PackageReleaseNotes>
-      0.4.3 (thanks to @itsC-Ramesh)
-      - Upgrade projects to .NET 8.0 (LTS).
-      - Update dependencies (Hangfire 1.8.23, Newtonsoft.Json 13.0.4).
-      - Explicitly referenced SQLitePCLRaw.bundle_green 2.1.11 to resolve NETSDK1206 RID-related warnings.
-      - Support for modern Hangfire 1.8 background process registration (GetStorageWideProcesses).
-    </PackageReleaseNotes>
+			0.4.4
+			- Retarget to .NET 10 (LTS) only — removes netstandard2.0 and net48 multi-targeting.
+			- Upgrade SQLitePCLRaw to 3.0.3 (removes vulnerable lib.e_sqlite3 2.x).
+			0.4.3 (thanks to @itsC-Ramesh)
+			- Upgrade projects to .NET 8.0 (LTS).
+			- Update dependencies (Hangfire 1.8.23, Newtonsoft.Json 13.0.4).
+			- Explicitly referenced SQLitePCLRaw.bundle_green 2.1.11 to resolve NETSDK1206 RID-related warnings.
+			- Support for modern Hangfire 1.8 background process registration (GetStorageWideProcesses).
+		</PackageReleaseNotes>
 	</PropertyGroup>
 	<ItemGroup>
 		<None Include="..\..\..\LICENSE">
@@ -36,8 +35,8 @@
 	<ItemGroup>
 		<PackageReference Include="Hangfire.Core" Version="1.8.23" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
-		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
-		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.11" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.11.272-beta" />
+		<PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="3.0.3" />
 	</ItemGroup>
 
 </Project>
