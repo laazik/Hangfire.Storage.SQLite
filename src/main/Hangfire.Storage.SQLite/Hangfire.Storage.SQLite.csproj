@@ -12,11 +12,13 @@
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>Hangfire Hangfire-Storage Hangfire-Extension SQLite</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<NoWarn>NU5104</NoWarn>
 		<title>Hangfire Storage SQLite</title>
 		<Description>An Alternative SQLite Storage for Hangfire</Description>
 		<PackageReleaseNotes>
 			0.4.4
 			- Retarget to .NET 10 (LTS) only — removes netstandard2.0 and net48 multi-targeting.
+			- Upgrade SQLitePCLRaw to 3.0.3 (removes vulnerable lib.e_sqlite3 2.x).
 			0.4.3 (thanks to @itsC-Ramesh)
 			- Upgrade projects to .NET 8.0 (LTS).
 			- Update dependencies (Hangfire 1.8.23, Newtonsoft.Json 13.0.4).
@@ -33,9 +35,8 @@
 	<ItemGroup>
 		<PackageReference Include="Hangfire.Core" Version="1.8.23" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
-		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
-		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.11" />
-		<PackageReference Include="SQLitePCLRaw.lib.e_sqlite3" Version="2.1.11" NoWarn="NU1903" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.11.272-beta" />
+		<PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="3.0.3" />
 	</ItemGroup>
 
 </Project>
